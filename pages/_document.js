@@ -2,18 +2,68 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../src/theme';
+//import { GA_TRACKING_ID } from '../common/gtag';
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
-          {/* PWA primary color */}
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <meta name="author" content="ONEm Communications Ltd" />
+          <meta property="og:url" content="https://anycoop.zone" />
+          <meta property="og:image" content="https://anycoop.zone/images/anycoop-logo-large.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="Anycoop Logo" />
+          <meta property="og:type" content="website" />
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
+          <link rel="dns-prefetch" href="https://anycoop.herokuapp.com" />
+          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+          <link rel="preload" as="script" href="https://bot.onem.zone/bundle.js" />
+          <link rel="preload" as="script" href="https://assets.calendly.com/assets/external/widget.js" />
+          <link 
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300;400;500;700&display=swap"
+            rel="preload"
+            as="style"
           />
+          <link 
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+          />
+          <link 
+            href="https://assets.calendly.com/assets/external/widget.css"
+            rel="preload"
+            as="style"
+          />
+          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="192x192"  href="/android-chrome-192x192.png" />
+          <link rel="icon" type="image/png" sizes="256x256"  href="/android-chrome-256x256.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="mask-icon" href="safari-pinned-tab.svg" color={theme.palette.primary.main} />
+          {/* <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script> */}
+          {/* <script src="https://bot.onem.zone/bundle.js"></script> */}
+          {/* <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          /> */}
         </Head>
         <body>
           <Main />

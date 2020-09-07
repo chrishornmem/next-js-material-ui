@@ -5,12 +5,17 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "clsx": "^1.1.1",
     "formik": "^2.1.5",
+    "mongoose": "^5.10.3",
     "next": "latest",
     "prop-types": "^15.7.2",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-facebook": "^8.1.4",
+    "react-google-recaptcha": "^2.1.0",
+    "react-lazyload": "^3.0.0"
   },
   "scripts": {
     "dev": "next",

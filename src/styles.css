@@ -1,0 +1,21 @@
+.calendly-badge-widget {
+	bottom: auto;
+	top: 20px;
+	right: 40px;
+}
+
+.calendly-badge-widget .calendly-badge-content {
+	font-family: 'Roboto';
+	font-size: 1rem;
+	padding: 15px;
+}
+
+.calendly-badge-widget .calendly-badge-content span {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .calendly-badge-widget {
+    display: none;
+  }
+}
