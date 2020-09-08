@@ -96,6 +96,11 @@ const styles = (theme) => ({
   },
 });
 
+// const CustomFacebook = dynamic(
+//   () => import('../CustomFacebook'),
+//   { ssr: false },
+// );
+
 function AppAppBar(props) {
   const { classes, inverted } = props;
 
@@ -106,11 +111,6 @@ function AppAppBar(props) {
     [classes.link]: true,
     [classes.primaryText]: inverted,
   });
-
-  const CustomFacebook = dynamic(
-    () => import('../CustomFacebook'),
-    { ssr: false },
-  );
 
   const logo = inverted ? '/images/anycoop-logo.png' : '/images/anycoop-logo-white.png';
 
@@ -136,12 +136,12 @@ function AppAppBar(props) {
           Home
         </ResponsiveToolbarLink>
       )}
-      {!smallDevice && (
+      {/* {!smallDevice && (
         <CustomFacebook 
           style={{ marginTop: -8 }}
           className={clsx(linkTextStyle, classes.underlineNone)}
         />
-      )}
+      )} */}
       <ResponsiveToolbarLink
         variant="h6"
         underline="none"

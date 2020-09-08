@@ -3,10 +3,6 @@ import React from 'react';
 import indigo from '@material-ui/core/colors/indigo';
 import { useTheme, makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
-
-import ProductHero from '../ProductHero';
-import Breaker from '../Breaker';
-import Showcase from './Showcase';
 import Summary from './Summary';
 
 const useStyles = makeStyles((theme) => ({
@@ -143,10 +139,7 @@ export default function Landing() {
 
   return (
     <>
-      {/* <AppAppBar color="primary" /> */}
       <Box className={classes.box}>
-        <ProductHero />
-        <Breaker color="primary" />
         <div className={classes.container}>
           <div className={classes.wrapper}>
             <picture>
@@ -158,10 +151,6 @@ export default function Landing() {
         </div>
       </Box>
       <Summary />
-      <Showcase containerClassName={classes.root} />
-      <Box className={classes.boxBreaker}>
-        <Breaker variant="type2" color={theme.palette.primary.light} />
-      </Box>
     </>
   );
 }

@@ -108,18 +108,12 @@ MyDocument.getInitialProps = async (ctx) => {
       enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
     });
 
-    let initialProps;
-    try {
-      initialProps = await Document.getInitialProps(ctx);
-      console.log("sheets.getStyleElement()");
-      console.log(sheets.getStyleElement());
-    } catch (error) {
-      console.error("error in getInitialProps");
-      console.error(error);
-    }
+  const initialProps = await Document.getInitialProps(ctx);
+
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
     styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
   };
 };
+
