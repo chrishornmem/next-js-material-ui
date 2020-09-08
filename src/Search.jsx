@@ -1,15 +1,16 @@
 // Render Prop
 import React from 'react';
+import axios from 'axios';
 
 import {
   Formik, Form, Field,
 } from 'formik';
 import TextField from '@material-ui/core/TextField';
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import SearchIcon from '@material-ui/icons/Search';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import Button from '@material-ui/core/Button';
+import Button from './Button';
 
 const styles = (theme) => ({
   /* Styles applied to the root element. */
@@ -114,7 +115,25 @@ const Search = React.forwardRef((props, ref) => {
   const MAXLENGTH = 500;
 
   async function getPath(keywords) {
-    return true;
+    if (typeof keywords === 'undefined' || String(keywords).length === 0) {
+      return;
+    }
+    try {
+      setIsLoading(true);
+      const response = await axios({
+        url: `/api/search?keywords=${keywords}`,
+        method: 'get',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+      });
+      setIsLoading(false);
+      return response?.data;
+    } catch (error) {
+      console.error(error);
+      setIsLoading(false);
+      throw new Error(error);
+    }
   }
 
   async function handleFormikSubmit(values, props) {

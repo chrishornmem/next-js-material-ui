@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { withStyles, createMuiTheme, useTheme } from '@material-ui/core/styles';
+import { createMuiTheme, withStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import PropTypes from 'prop-types';
