@@ -213,7 +213,7 @@ export async function getStaticPaths() {
       type: 'For Sale',
     })
       .populate('_coop')
-      .limit(1000);
+      .limit(1);
 
     classifieds.forEach((classified) => {
       paths.push({ params: { id: classified.id } });
