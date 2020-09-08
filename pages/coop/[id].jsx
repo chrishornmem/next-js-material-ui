@@ -248,7 +248,7 @@ export async function getStaticPaths() {
       throw new Error('db not connected');
     }
  
-    const coops = await Coops.find({ description: { $exists: true } }).limit(1000);
+    const coops = await Coops.find({ description: { $exists: true } }).limit(1);
 
     coops.forEach((coop) => {
       paths.push({ params: { id: coop.id } });
