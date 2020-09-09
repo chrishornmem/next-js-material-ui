@@ -2,7 +2,6 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../src/theme';
-//import { GA_TRACKING_ID } from '../common/gtag';
 
 export default class MyDocument extends Document {
   render() {
@@ -46,24 +45,6 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <link rel="mask-icon" href="safari-pinned-tab.svg" color={theme.palette.primary.main} />
-          {/* <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script> */}
-          {/* <script src="https://bot.onem.zone/bundle.js"></script> */}
-          {/* <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          /> */}
         </Head>
         <body>
           <Main />

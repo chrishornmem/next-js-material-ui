@@ -3,29 +3,13 @@ import indigo from '@material-ui/core/colors/indigo';
 
 const rawTheme = createMuiTheme({
   palette: {
-    // primary: {
-    //  main: '#43a047',
-    // },
-    // secondary: {
-    //   main: '#ffb300',
-    // },
-    // info: {
-    //   main: '#110133'
-    // },
-    // warning: {
-    //   main: '#ffdc34'
-    // },
-    // success: {
-    //   main: '#4dd599'
-    // }
     primary: {
-      //main: green['600'], //43a047
       main: '#00701a',
       light: '#76d275',
       dark: '#00701a',
     },
     secondary: {
-      main: indigo['500'], //3f51b5
+      main: indigo['500'],
       light: '#757de8',
       dark: '#002984',
     },
@@ -42,7 +26,6 @@ const rawTheme = createMuiTheme({
 const fontHeader = {
   color: rawTheme.palette.text.primary,
   fontWeight: rawTheme.typography.fontWeightMedium,
- // fontFamily: rawTheme.typography.fontFamilySecondary,
   textTransform: 'uppercase',
 };
 
@@ -52,8 +35,6 @@ const theme = {
     ...rawTheme.palette,
     background: {
       ...rawTheme.palette.background,
-      // default: rawTheme.palette.common.white,
-      // placeholder: grey[200],
     },
   },
   typography: {
@@ -64,7 +45,6 @@ const theme = {
       ...fontHeader,
       fontWeight: rawTheme.typography.fontWeightBold,
       fontSize: "2rem",
-      //  fontSize: 56,
       textTransform: 'initial',
     },
     h2: {
@@ -72,29 +52,24 @@ const theme = {
       fontWeight: rawTheme.typography.fontWeightBold,
       fontSize: "2rem",
       lineHeight: 1.334,
-    //  fontWeight: rawTheme.typography.fontWeightLight,
     },
     h3: {
       ...rawTheme.typography.h3,
       ...fontHeader,
-    //  fontSize: 42,
     },
     h4: {
       ...rawTheme.typography.h4,
       textTransform: 'uppercase',
-    //  ...fontHeader,
       fontSize: '1.5rem',
       fontWeight: rawTheme.typography.fontWeightMedium,
     },
     h5: {
       ...rawTheme.typography.h5,
-      //  fontSize: 24,
       fontWeight: rawTheme.typography.fontWeightLight,
     },
     h6: {
       ...rawTheme.typography.h6,
       textTransform: 'uppercase',
-      //  ...fontHeader,
       fontWeight: 600,
       fontFamily: rawTheme.typography.fontFamilySecondary,
       fontSize: '0.9rem',
@@ -115,13 +90,11 @@ const theme = {
       ...rawTheme.typography.body1,
       fontWeight: rawTheme.typography.fontWeightLight,
       fontSize: "1.5rem",
-    //  fontSize: 16,
     },
     body2: {
       ...rawTheme.typography.body2,
       fontSize: "1.25rem",
       fontWeight: rawTheme.typography.fontWeightBold,
-      //   fontSize: 14,
     },
   },
 };

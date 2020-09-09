@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-//import indigo from '@material-ui/core/colors/indigo';
-import { Typography } from '@material-ui/core';
+import Typography from '../Typography';
 
-import { Highlight, HighlightItem } from '../Highlight';
+import Highlight from '../Highlight';
+import HighlightItem from '../HighlightItem';
 
 const styles = (theme) => ({
-  root: {
-  //  backgroundColor: indigo['50'],
-  },
+  root: {},
 });
 
 function Summary(props) {
