@@ -19,10 +19,6 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta name="theme-color" content={theme.palette.primary.main} />
           <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
-          <link rel="dns-prefetch" href="https://anycoop.herokuapp.com" />
-          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-          <link rel="preload" as="script" href="https://bot.onem.zone/bundle.js" />
-          <link rel="preload" as="script" href="https://assets.calendly.com/assets/external/widget.js" />
           <link 
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300;400;500;700&display=swap"
             rel="preload"
@@ -32,12 +28,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300;400;500;700&display=swap"
             rel="stylesheet"
           />
-          <link 
-            href="https://assets.calendly.com/assets/external/widget.css"
-            rel="preload"
-            as="style"
-          />
-          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="192x192"  href="/android-chrome-192x192.png" />
